@@ -1,13 +1,8 @@
 import { CSVFileReader } from "./CSVFileReader";
+import { MatchResult } from "./matchResult";
 
 const reader = new CSVFileReader("football.csv");
 reader.read();
-enum MatchResult {
-  HomeWin = "H",
-  AwayWin = "A",
-  Draw = "D"
-}
-
 let manUWins = 0;
 
 reader.data.forEach((match: string[]): void => {
